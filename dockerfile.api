@@ -1,0 +1,8 @@
+FROM node:16-alpine
+
+WORKDIR /app
+
+COPY ./ghorde-api/package.json .
+COPY ./ghorde-api/yarn.lock .
+
+CMD yarn; yarn dev
