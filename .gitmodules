@@ -1,9 +1,9 @@
 [submodule "ghorde-webclient"]
 	path = ghorde-webclient
-	url = https://github.com/sohamjaiswal/ghorde-webclient
+	url = https://github.com/ghorde/ghorde-webclient
 [submodule "ghorde-bot"]
 	path = ghorde-bot
-	url = git@github.com:sohamjaiswal/ghorde-bot.git
+	url = https://github.com/ghorde/ghorde-bot
 [submodule "ghorde-api"]
 	path = ghorde-api
-	url = https://github.com/sohamjaiswal/ghorde-api
+	url = https://github.com/ghorde/ghorde-api
