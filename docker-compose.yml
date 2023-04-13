@@ -26,3 +26,5 @@ services:
       - 5000:5000
     volumes:
       - ./ghorde-api:/app
+    depends_on: 
+      - ghorde-surreal
