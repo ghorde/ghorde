@@ -4,3 +4,6 @@
 [submodule "ghorde-bot"]
 	path = ghorde-bot
 	url = git@github.com:sohamjaiswal/ghorde-bot.git
+[submodule "ghorde-api"]
+	path = ghorde-api
+	url = https://github.com/sohamjaiswal/ghorde-api
