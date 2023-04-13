@@ -17,3 +17,12 @@ services:
       dockerfile: dockerfile.bot
     volumes: 
       - ./ghorde-bot:/app
+  ghorde-api:
+    container_name: ghorde_api
+    build:
+      context: ./
+      dockerfile: dockerfile.api
+    ports:
+      - 5000:5000
+    volumes:
+      - ./ghorde-api:/app
