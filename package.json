@@ -1,11 +1,12 @@
 {
-    "name": "sveltepress",
-    "version": "1.0.0",
-    "main": "index.js",
-    "license": "MIT",
-    "private": true,
-    "workspaces": [
-      "bot",
-      "webclient"
-    ]
-  }
+  "name": "ghorde",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:ghorde/ghorde.git",
+  "author": "Soham Jaiswal <sohamjaiswal10@gmail.com>",
+  "license": "MIT",
+  "private": "true",
+  "workspaces": [
+    "ghorde-webclient", "ghorde-api", "ghorde-bot"
+  ]
+}
