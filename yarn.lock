@@ -56,6 +56,11 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
+"@thunder04/supermap@^3.0.2":
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/@thunder04/supermap/-/supermap-3.0.2.tgz#7d8decee8d837c9a430157167fe28eda5890de7c"
+  integrity sha512-SjlUrfe45mwiAgKZHRRhh+oHRwXsjrCg6NI2HJxymTJt+9SwJw422yse/A5lr5WBpTky6qEce+H6Ec1sytm93A==
+
 "@tsconfig/node10@^1.0.7":
   version "1.0.9"
   resolved "https://registry.npmjs.org/@tsconfig/node10/-/node10-1.0.9.tgz"
@@ -97,6 +102,15 @@
   integrity sha512-zdQDHKUgcX/zBc4GrwsE/7dVdAD8JR4EuiAXiiUhhfyIJXXb2+PrGshFyeXWQPMmmZ2XxgaqclgpIC7eTXc1mg==
   dependencies:
     "@types/node" "*"
+
+"@zeldafan0225/ai_horde@^4.0.1":
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/@zeldafan0225/ai_horde/-/ai_horde-4.0.1.tgz#ac511ecbbcf6b3472935f1a63ec8dc00446b6b25"
+  integrity sha512-mf1cknnBYzKCvgH4KAkdVY3J7sLkR2b79W6I9ZEA2aJCyua28bpZzNaCDSHKKyaNj+0wyHViC+L53X32jw9pMg==
+  dependencies:
+    "@thunder04/supermap" "^3.0.2"
+    centra "^2.5.0"
+    esbuild "^0.12.28"
 
 abort-controller@^3.0.0:
   version "3.0.0"
@@ -241,6 +255,11 @@ call-bind@^1.0.0:
     function-bind "^1.1.1"
     get-intrinsic "^1.0.2"
 
+centra@^2.5.0:
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/centra/-/centra-2.6.0.tgz#79117998ee6908642258db263871381aa5d1204a"
+  integrity sha512-dgh+YleemrT8u85QL11Z6tYhegAs3MMxsaWAq/oXeAmYJ7VxL3SI9TZtnfaEvNDMAPolj25FXIb3S+HCI4wQaQ==
+
 chokidar@^3.5.1:
   version "3.5.3"
   resolved "https://registry.npmjs.org/chokidar/-/chokidar-3.5.3.tgz"
@@ -360,6 +379,11 @@ end-of-stream@^1.1.0:
   integrity sha512-+uw1inIHVPQoaVuHzRyXd21icM+cnt4CzD5rW+NC1wjOUSTOs+Te7FOv7AhN7vS9x/oIyhLP5PR1H+phQAHu5Q==
   dependencies:
     once "^1.4.0"
+
+esbuild@^0.12.28:
+  version "0.12.29"
+  resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.12.29.tgz#be602db7c4dc78944a9dbde0d1ea19d36c1f882d"
+  integrity sha512-w/XuoBCSwepyiZtIRsKsetiLDUVGPVw1E/R3VTFSecIy8UR7Cq3SOtwKHJMFoVqqVG36aGkzh4e8BvpO1Fdc7g==
 
 escape-html@~1.0.3:
   version "1.0.3"
@@ -952,7 +976,7 @@ rimraf@^2.6.1:
   dependencies:
     glob "^7.1.3"
 
-rxjs@*:
+rxjs@^7.5.2:
   version "7.8.0"
   resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-7.8.0.tgz#90a938862a82888ff4c7359811a595e14e1e09a4"
   integrity sha512-F2+gxDshqmIub1KdvZkaEfGDwLNpPvk9Fs6LD/MyQxNgMds/WH9OdDDXOmxUZpME+iSK3rQCctkL0DYyytUqMg==
