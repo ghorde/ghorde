@@ -3,38 +3,40 @@ version: "3.3"
 services:
   ghorde-surreal:
     image: surrealdb/surrealdb:latest
-    container_name: ghorde_surrealdb
+    container_name: ghorde-surreal
     restart: always
     command: start --user root --pass root file:/data/database.db
     ports:
       - 8000:8000
     volumes:
       - ./data:/data
-  ghorde-bot:
-    container_name: ghorde_bot
-    build: 
-      context: ./
-      dockerfile: dockerfile.bot
-    volumes: 
-      - ./ghorde-bot:/app
-    environment:
-      - LOGGER_LEVEL=info
-      - DEFAULT_PREFIX="!"
-      - API_LOC="http://ghorde_api:5000/bot"
   ghorde-api:
-    container_name: ghorde_api
+    container_name: ghorde-api
     build:
       context: ./
       dockerfile: dockerfile.api
     ports:
       - 5000:5000
-    volumes:
-      - ./ghorde-api:/app
     depends_on: 
       - ghorde-surreal
+    volumes:
+      - ./ghorde-api:/app
     environment:
       - PORT=5000 
       - SURREAL_LOC=http://ghorde-surreal:8000/rpc 
       - SURREAL_USER=root
       - SURREAL_PASS=root
       - LOGGER_LEVEL=info
+  ghorde-bot:
+    container_name: ghorde-bot
+    build: 
+      context: ./
+      dockerfile: dockerfile.bot
+    volumes:
+      - ./ghorde-bot:/app
+    environment:
+      - LOGGER_LEVEL=info
+      - DEFAULT_PREFIX="!"
+      - API_LOC=http://ghorde-api:5000/bot
+    depends_on: 
+      - ghorde-api
