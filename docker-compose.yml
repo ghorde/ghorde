@@ -17,6 +17,10 @@ services:
       dockerfile: dockerfile.bot
     volumes: 
       - ./ghorde-bot:/app
+    environment:
+      - LOGGER_LEVEL=info
+      - DEFAULT_PREFIX="!"
+      - API_LOC="http://ghorde_api:5000/bot"
   ghorde-api:
     container_name: ghorde_api
     build:
@@ -28,3 +32,9 @@ services:
       - ./ghorde-api:/app
     depends_on: 
       - ghorde-surreal
+    environment:
+      - PORT=5000 
+      - SURREAL_LOC=http://ghorde-surreal:8000/rpc 
+      - SURREAL_USER=root
+      - SURREAL_PASS=root
+      - LOGGER_LEVEL=info

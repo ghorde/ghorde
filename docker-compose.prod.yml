@@ -1,0 +1,38 @@
+version: "3.3"
+
+services:
+  ghorde-surreal-prod:
+    image: surrealdb/surrealdb:latest
+    container_name: ghorde-surreal-prod
+    restart: always
+    command: start --user root --pass root file:/data/database.db
+    ports:
+      - 8000:8000
+    volumes:
+      - ./data:/data
+  ghorde-api-prod:
+    container_name: ghorde-api-prod
+    build:
+      context: ./
+      dockerfile: dockerfile.prod.api
+    ports:
+      - 5000:5000
+    depends_on: 
+      - ghorde-surreal-prod
+    environment:
+      - PORT=5000 
+      - SURREAL_LOC=http://ghorde-surreal-prod:8000/rpc 
+      - SURREAL_USER=root
+      - SURREAL_PASS=root
+      - LOGGER_LEVEL=info
+  ghorde-bot-prod:
+    container_name: ghorde-bot-prod
+    build: 
+      context: ./
+      dockerfile: dockerfile.prod.bot
+    environment:
+      - LOGGER_LEVEL=info
+      - DEFAULT_PREFIX="!"
+      - API_LOC=http://ghorde-api-prod:5000/bot
+    depends_on: 
+      - ghorde-api-prod
