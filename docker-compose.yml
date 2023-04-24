@@ -16,13 +16,13 @@ services:
       context: ./
       dockerfile: dockerfile.api
     ports:
-      - 5000:5000
+      - 5050:5050
     depends_on: 
       - ghorde-surreal
     volumes:
       - ./ghorde-api:/app
     environment:
-      - PORT=5000 
+      - PORT=5050 
       - SURREAL_LOC=http://ghorde-surreal:8000/rpc 
       - SURREAL_USER=root
       - SURREAL_PASS=root

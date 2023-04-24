@@ -34,7 +34,7 @@ services:
     restart: always
     environment:
       - LOGGER_LEVEL=info
-      - DEFAULT_PREFIX="!"
+      - DEFAULT_PREFIX=!
       - API_LOC=http://ghorde-api-prod:5000/bot
     depends_on: 
       - ghorde-api-prod
