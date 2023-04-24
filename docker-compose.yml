@@ -36,7 +36,7 @@ services:
       - ./ghorde-bot:/app
     environment:
       - LOGGER_LEVEL=info
-      - DEFAULT_PREFIX="!"
+      - DEFAULT_PREFIX=!
       - API_LOC=http://ghorde-api:5000/bot
     depends_on: 
       - ghorde-api
