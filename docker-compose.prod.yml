@@ -17,6 +17,7 @@ services:
       dockerfile: dockerfile.prod.api
     ports:
       - 5000:5000
+      - 443:443
     depends_on: 
       - ghorde-surreal-prod
     restart: always

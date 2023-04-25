@@ -17,6 +17,7 @@ services:
       dockerfile: dockerfile.api
     ports:
       - 5050:5050
+      - 5051:443
     depends_on: 
       - ghorde-surreal
     volumes:
