@@ -17,7 +17,6 @@ services:
       dockerfile: dockerfile.api
     ports:
       - 5050:5050
-      - 5051:443
     depends_on: 
       - ghorde-surreal
     volumes:
@@ -38,6 +37,6 @@ services:
     environment:
       - LOGGER_LEVEL=info
       - DEFAULT_PREFIX=!
-      - API_LOC=http://ghorde-api:5000/bot
+      - API_LOC=http://ghorde-api:5050/bot
     depends_on: 
       - ghorde-api

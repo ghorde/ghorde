@@ -16,13 +16,12 @@ services:
       context: ./
       dockerfile: dockerfile.prod.api
     ports:
-      - 80:80
-      - 443:443
+      - 5050:5050
     depends_on: 
       - ghorde-surreal-prod
     restart: always
     environment:
-      - PORT=80
+      - PORT=5050
       - SURREAL_LOC=http://ghorde-surreal-prod:8000/rpc 
       - SURREAL_USER=root
       - SURREAL_PASS=root
@@ -36,6 +35,6 @@ services:
     environment:
       - LOGGER_LEVEL=info
       - DEFAULT_PREFIX=!
-      - API_LOC=http://ghorde-api-prod:5000/bot
+      - API_LOC=http://ghorde-api-prod:5050/bot
     depends_on: 
       - ghorde-api-prod
