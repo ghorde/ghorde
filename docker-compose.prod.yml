@@ -16,13 +16,13 @@ services:
       context: ./
       dockerfile: dockerfile.prod.api
     ports:
-      - 5000:5000
+      - 80:80
       - 443:443
     depends_on: 
       - ghorde-surreal-prod
     restart: always
     environment:
-      - PORT=5000 
+      - PORT=80
       - SURREAL_LOC=http://ghorde-surreal-prod:8000/rpc 
       - SURREAL_USER=root
       - SURREAL_PASS=root
