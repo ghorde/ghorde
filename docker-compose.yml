@@ -27,6 +27,7 @@ services:
       - SURREAL_USER=root
       - SURREAL_PASS=root
       - LOGGER_LEVEL=info
+      - ORIGINS=localhost,ghorde-bot
   ghorde-bot:
     container_name: ghorde-bot
     build: 
