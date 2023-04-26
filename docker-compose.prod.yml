@@ -26,6 +26,7 @@ services:
       - SURREAL_USER=root
       - SURREAL_PASS=root
       - LOGGER_LEVEL=info
+      - ORIGINS=ghorde-api.kodski.com,localhost
   ghorde-bot-prod:
     container_name: ghorde-bot-prod
     build: 
