@@ -33,6 +33,7 @@ services:
     build: 
       context: ./
       dockerfile: dockerfile.bot
+    restart: always
     volumes:
       - ./ghorde-bot:/app
     environment:
